@@ -13,6 +13,10 @@ export class AppComponent {
     {id: 2, name: 'Narco'},
     {id: 3, name: 'Bombasto'},
   ];
+
+  selectedHero: Hero;
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }
-
-
