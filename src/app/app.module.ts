@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
 import { HiroDetailComponent } from './hiro-detail/hiro-detail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -11,7 +13,8 @@ import { HiroDetailComponent } from './hiro-detail/hiro-detail.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
