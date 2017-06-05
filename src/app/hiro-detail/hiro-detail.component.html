@@ -1,0 +1,21 @@
+<p>
+  hiro-detail works!
+</p>
+
+<div *ngIF="hero">
+  <h2>{{hero.name}} details!</h2>
+  <div><label>id: </label>{{hero.id}}</div>
+  <div>
+    <label>name: </label>
+    <input type="text" [(ngModel)]="hero.name">
+  </div>
+</div>
+
+<h1>{{title}}</h1>
+<h2>My heroes</h2>
+<ul class="heroes">
+  <li *ngFor"let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+    <span class="badge">{{hero.id}}</span>{{hero.name}}
+  </li>
+</ul>
+<app-hero-detail [hero]="selectedHero"><app-hero-detail>
