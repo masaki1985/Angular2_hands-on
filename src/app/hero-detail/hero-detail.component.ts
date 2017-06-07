@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 
 import { Hero } from '../hero'
 import { HeroService } from '../hero.service';
+
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
@@ -11,9 +12,9 @@ import { HeroService } from '../hero.service';
 export class HeroDetailComponent implements OnInit {
 
   constructor(
-    private  heroService: HeroService,
+    private heroService: HeroService,
     private route: ActivatedRoute) {
-    }
+  }
 
   @Input() hero: Hero;
 
@@ -24,7 +25,7 @@ export class HeroDetailComponent implements OnInit {
         .then(hero => this.hero = hero);
     });
   }
-
+  
   goBack(): void {
     window.history.back();
   }
