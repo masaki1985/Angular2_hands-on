@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { HeroService } from "app/hero.service";
+import { Hero } from '../hero'
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
+  id: number;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private heroService: HeroService
+  ) { }
 
-  ngOnInit() {
+  search(): void {
+    if (this.id != null) {
+      this.router.navigate(['/detail',this.id]);
+    }
   }
-
 }
