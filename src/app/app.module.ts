@@ -9,6 +9,7 @@ import { HeroesComponent } from "./heroes/heroes.component";
 import { HeroService } from "app/hero.service";
 import { routing } from "app/app.routing";
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     HeroDetailComponent,
     HeroesComponent,
-    DashboardComponent
+    DashboardComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
