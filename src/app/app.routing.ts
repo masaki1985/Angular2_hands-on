@@ -10,23 +10,19 @@ const appRoutes: Routes = [
         path: 'search',
         component: SearchComponent
     },
-
     {
         path: 'detail/:id',
         component: HeroDetailComponent
     },
-    
     {
         path: 'dashboard',
         component: DashboardComponent
     },
-
     {
         path: '',
         redirectTo: '/dashboard',
         pathMatch: 'full'
     },
-
     {
         path: 'heroes',
         component: HeroesComponent
