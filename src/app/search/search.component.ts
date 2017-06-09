@@ -17,7 +17,7 @@ export class SearchComponent {
   ) { }
 
   search(): void {
-    if (!this.id) {
+    if (this.id) {
       this.router.navigate(['/detail',this.id]);
     }
   }
