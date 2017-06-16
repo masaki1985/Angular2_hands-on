@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './core/in-memory-data.service';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from "./heroes/heroes.component";
 import { HeroService } from "app/hero.service";
