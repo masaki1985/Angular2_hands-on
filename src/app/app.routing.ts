@@ -1,11 +1,12 @@
-import { ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
+//import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from "app/dashboard/dashboard.component";
 import { HeroDetailComponent } from "app/hero-detail/hero-detail.component";
 import { SearchComponent } from "app/search/search.component";
 
-const appRoutes: Routes = [
+const routes: Routes = [
     {
         path: 'search',
         component: SearchComponent
@@ -28,5 +29,8 @@ const appRoutes: Routes = [
         component: HeroesComponent
     }
 ];
-
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
+export class AppRoutingModule {};
